@@ -71,3 +71,15 @@ export type TextureKey<
   S extends ShirtType,
   P extends SectionType
 > = keyof (typeof studioTextures.shirts)[S][P];
+
+export const environmentPaths = {
+  white: "/textures/white/third/",
+  gray: "/textures/gray/third/",
+  sport: "/textures/sport/third/",
+};
+
+export const videoTextures = {
+  white: "/textures/white/third/adidas.mp4",
+  gray: "/textures/gray/third/adidas.mp4",
+  sport: "/textures/sport/third/adidas.mp4",
+};
