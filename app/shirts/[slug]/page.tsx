@@ -1,8 +1,17 @@
-import { Canvas } from "@react-three/fiber";
-import React from "react";
+"use client";
+import { notFound, useParams } from "next/navigation";
+import Scene from "@/app/components/Scene";
+import { ShirtType } from "@/lib/textures";
 
 const page = () => {
-  return <Canvas></Canvas>;
+  const params = useParams();
+  const shirtType = params.slug as ShirtType;
+  if (!shirtType) return notFound();
+  return (
+    <>
+      <Scene shirtType={shirtType} />
+    </>
+  );
 };
 
 export default page;
