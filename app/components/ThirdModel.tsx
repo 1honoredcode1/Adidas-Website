@@ -12,7 +12,7 @@ import {
   useShirtSectionTextures,
   useShirtVideoTexture,
 } from "@/lib/useTextures";
-// import Masking from "./Masking";
+import Masking from "./Masking";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -56,7 +56,7 @@ const ThirdModel = ({ shirtType }: { shirtType: ShirtType }) => {
   }, []);
   return (
     <group>
-      {/* <Masking ref={maskRef} /> */}
+      <Masking ref={maskRef} />
       <group ref={groupRef}>
         <mesh
           scale={isMobile ? 0.06 : 0.1}
