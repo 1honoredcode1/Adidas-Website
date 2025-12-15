@@ -2,6 +2,7 @@
 import { notFound, useParams } from "next/navigation";
 import Scene from "@/app/components/Scene";
 import { ShirtType } from "@/lib/textures";
+import ScrollIndicator from "@/app/components/ScrollIndicator";
 
 const page = () => {
   const params = useParams();
@@ -10,6 +11,7 @@ const page = () => {
   return (
     <>
       <Scene shirtType={shirtType} />
+      <ScrollIndicator shirtType={shirtType} />
     </>
   );
 };
